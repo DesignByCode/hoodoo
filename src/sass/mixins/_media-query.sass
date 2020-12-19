@@ -1,0 +1,23 @@
+=media-up($name)
+    $size: ''
+    @if is-number($name)
+        $size: $name
+    @else
+        $size: map-get($screens, $name)
+    @media screen and (min-width: $size)
+        @content
+
+=media-down($name)
+    $size: ''
+    @if is-number($name)
+        $size: $name
+    @else
+        $size: map-get($screens, $name)
+    @media screen and (max-width: $size)
+        @content
+
+=media-between($size1, $size2)
+    $value1: map-get($screens, $size1)
+    $value2: map-get($screens, $size2)
+    @media (min-width: $value1) and (max-width: $value2)
+        @content

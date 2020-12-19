@@ -1,0 +1,8 @@
+
+
+@each $key, $value in $colors_set
+    .text
+        &--#{$key}
+            color: $value !important
+            &-light
+                color: mix($value, #fff, 10%) !important

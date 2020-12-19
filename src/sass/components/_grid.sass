@@ -1,0 +1,29 @@
+.wrapper
+    display: flex
+    margin-left: auto
+    margin-right: auto
+    width: 100%
+    max-width: $max-screen-width
+    padding: 0 $global-padding
+
+    &--fluid
+        display: flex
+        margin-left: auto
+        margin-right: auto
+        width: 100%
+        padding: 0 $global-padding
+
+
+.row
+    position: relative
+    display: flex
+    flex: 1
+    margin-left: -$global-padding
+    margin-right: -$global-padding
+    margin-bottom: $global-padding
+    flex-wrap: wrap
+
+    &--reverse
+        flex-direction: row-reverse
+
++columns

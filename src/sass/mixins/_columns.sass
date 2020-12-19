@@ -1,0 +1,20 @@
+%column
+    flex: 0 0 1
+    width: 100%
+    flex-direction: column
+    padding: $global-padding
+
+=columns($column-count: $columns, $breakpoint: $screens)
+    @each $key, $value in $breakpoint
+        @for $i from 1 through $column-count
+            .#{$key}-col-#{$i}
+                @extend %column
+
+        +media-up($key)
+            @for $i from 1 through $column-count
+                .#{$key}-col-#{$i}
+                    flex: 0 0 (100% / $column-count) * $i
+                    max-width: (100% / $column-count) * $i
+
+                .#{$key}-offset-#{$i}
+                    margin-left: (100% / $column-count) * $i

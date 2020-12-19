@@ -1,0 +1,14 @@
+
+.shadow
+    @for $i from 1 through 10
+        &--#{$i}
+            box-shadow: rgba(#000, 0.3 ) 0 #{$i}px #{$i * 3}px
+            &-hover
+                &:hover
+                    box-shadow: rgba(#000, 0.35) 0 #{$i}px #{$i}px
+
+        &--inset-#{$i}
+            box-shadow: inset rgba(#000, 0.3 ) 0 0 #{$i * 3}px
+            &-hover
+                &:hover
+                    box-shadow: inset rgba(#000, 0.35) 0 0 #{$i}px

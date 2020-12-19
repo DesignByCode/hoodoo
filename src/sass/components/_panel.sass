@@ -1,0 +1,21 @@
+.panel
+    display: flex
+    flex: 1
+    flex-direction: column
+    background: $panel-background-color
+    color: $panel-text-color
+    +radius
+
+    &__header
+        border-bottom: solid 1px var(--mute-color)
+        padding: $global-padding
+        font-weight: 700
+
+    &__body
+        padding: $global-padding
+
+    &__footer
+        padding: $global-padding
+        border-top: solid 1px var(--mute-color)
+        background-color: var(--mute-color)
+        margin-top: auto

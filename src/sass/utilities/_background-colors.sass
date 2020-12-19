@@ -1,0 +1,10 @@
+
+
+@each $key, $value in $colors_set
+    .bg
+        &--#{$key}
+            background-color: var(--#{$key}-color) !important
+            &-light
+                background-color: mix($value, #fff, 10%) !important
+            &-gradient
+                background: linear-gradient(to bottom, $value, darken($value, 5%)) !important

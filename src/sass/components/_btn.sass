@@ -1,0 +1,119 @@
+@import "../config/config-btn"
+
+/** Default Button style **/
+
+.btn,
+a.btn,
+button.btn,
+input[type="button"].btn
+    display: inline-flex
+    flex: 0 0 auto
+    align-items: center
+    justify-content: center
+    padding: 10px 20px
+    outline: none
+    border: 2px solid transparent
+    line-height: 1.68
+    letter-spacing: 1px
+    font-weight: 500
+    text-align: center
+    box-shadow: rgba(0,0,0,0.1) 0 1px 3px
+    cursor: pointer
+    text-decoration: none
+    color: #333
+    vertical-align: middle
+    transition: color, box-shadow 0.2s ease
+    background: transparent
+    +radius
+
+    /** Button Hover **/
+    &:hover
+        text-decoration: none
+        box-shadow: rgba(0,0,0,0.25) 0 4px 7px -3px
+
+    &:not(:first-child)
+        margin-left: 10px
+
+    /** Button focus **/    
+    &:focus
+        z-index: 2
+        filter: brightness(0.9) drop-shadow(0 5px 5px var(--default-color))
+    
+    /** Button Colors **/
+    @each $key, $value in $colors_set
+        /** Solid Buttons **/
+        &--#{$key}
+            background-color: var(--#{$key}-color)
+            @if $key == 'default'
+                border: solid 1px var(--#{$key}-dark-color)
+            @if lightness($value) < 60%
+                color: var(--white-color)
+            @else
+                border: solid 2px var(--#{$key}-color)
+                color: var(--black-color)
+
+            &:hover
+                @if lightness($value) < 60%
+                    background: var(--#{$key}-light-color)
+                @else
+                    background: var(--#{$key}-dark-color)
+
+        /** Outline Button **/
+        &--#{$key}-outline
+            background-color: transparent
+            border: solid 2px var(--#{$key}-color)
+            color: var(--#{$key}-color)
+            &:hover
+                @if lightness($value) < 60%
+                    border: solid 2px var(--#{$key}-light-color)
+                @else
+                    border: solid 2px var(--#{$key}-dark-color)
+
+        /** Gradient Button **/
+        &--#{$key}-gradient
+            transition: all 0.25s ease
+            background: linear-gradient(to top, var(--#{$key}-light-color) 0% 0%, var(--#{$key}-dark-color))
+            @if lightness($value) < 60%
+                color: var(--white-color)
+            @else
+                border: solid 2px var(--#{$key}-color)
+                color: var(--black-color)
+            &:hover
+                background: linear-gradient(to top, var(--#{$key}-light-color) 0% 50%, var(--#{$key}-dark-color))
+
+    &--glass
+        backdrop-filter: blur(2px)
+        background-clip: padding-box
+        border: solid 2px transparent
+        &:hover
+            border: solid 2px transparent !important
+            backdrop-filter: blur(4px)
+
+
+    /** Button sizes **/
+    @each $size, $key in $btn-sizes-map
+        &--#{$size}
+            padding: map-get($key, padding)
+            font-size: map-get($key, font-size)
+
+    &--rounded
+        +radius(50px)
+
+.btn__group
+    box-shadow: rgba(0,0,0,0.15) 0 1px 3px
+    display: inline-flex
+    align-self: flex-start
+    align-content: stretch
+    +radius
+
+    .btn,
+    a.btn,
+    button.btn,
+    input[type="button"].btn
+        margin: 0 !important
+        +radius(0)
+
+        &:first-child
+            +radius($global-border-radius 0 0 $global-border-radius)
+        &:last-child
+            +radius(0 $global-border-radius $global-border-radius 0 )

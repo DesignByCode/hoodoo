@@ -1,0 +1,50 @@
+{
+    "name": "hoodoo",
+    "homepage": "https://designbycode.github.io/hoodoo",
+    "version": "0.1.0",
+    "private": false,
+    "dependencies": {
+        "normalize-scss": "^7.0.1"
+    },
+    "scripts": {
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build",
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject"
+    },
+    "eslintConfig": {
+        "extends": [
+            "react-app",
+            "react-app/jest"
+        ]
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 3 chrome version",
+            "last 3 firefox version",
+            "last 3 safari version"
+        ]
+    },
+    "devDependencies": {
+        "node-sass": "^4.14.1",
+        "react": "^17.0.1",
+        "react-dom": "^17.0.1",
+        "react-icons": "^4.1.0",
+        "react-markdown": "^5.0.3",
+        "react-router-dom": "^5.2.0",
+        "react-scripts": "4.0.1",
+        "react-spring": "^8.0.27",
+        "react-transition-group": "^4.4.1",
+        "web-vitals": "^0.2.4",
+        "gh-pages": "^3.1.0",
+        "highlight.js": "^10.4.1",
+        "prop-types": "^15.7.2"
+    }
+}
