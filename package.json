@@ -1,5 +1,7 @@
 {
     "name": "hoodoo",
+    "description": "Front-end sass framework",
+    "keywords": ["Front-end", "sass", "css", "hoodoo", "flex grid", "responsive", "mobile-first", "web"],
     "homepage": "https://designbycode.github.io/hoodoo",
     "version": "0.1.0",
     "private": false,
