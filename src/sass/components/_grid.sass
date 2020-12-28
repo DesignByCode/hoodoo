@@ -1,26 +1,26 @@
 .wrapper
     display: flex
+    flex-direction: column
     margin-left: auto
     margin-right: auto
     width: 100%
     max-width: $max-screen-width
-    padding: 0 $global-padding
+    padding: 0 var(--global-padding, 15px)
 
     &--fluid
         display: flex
         margin-left: auto
         margin-right: auto
         width: 100%
-        padding: 0 $global-padding
-
+        padding: 0 var(--global-padding, 15px)
 
 .row
     position: relative
     display: flex
     flex: 1
-    margin-left: -$global-padding
-    margin-right: -$global-padding
-    margin-bottom: $global-padding
+    margin-left: var(--global-negative-padding, -15px)
+    margin-right: var(--global-negative-padding, -15px)
+    margin-bottom: var(--global-padding, 15px)
     flex-wrap: wrap
 
     &--reverse

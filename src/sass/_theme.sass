@@ -1,39 +1,74 @@
+@import "mixins/color"
 
-$color-shade-strength: 5% !default
-
-
-$colors: (primary: #f54703, secondary: #11507c,  dark: #091935,  mute: #d2d8d4)
-
+$color-shade-strength: 7% !default
+$colors: (primary: #e63946, secondary: #457b9d,  dark: #1d3557, default: #f1faee)
+$screens: (xs: 300px, sm: 480px, md: 800px, lg: 1200px, xl: 1400px)
 $max-screen-width: 1000px
 $columns: 12
 $nav-breakpoint: 900px
 
-$global-background: #e1e1e1
-$global-font-color: #333
-$global-font-size: 16px
-$global-header-font: 'Orbitron', sans-serif
-$global-body-font: 'Roboto', sans-serif
-$global-line-height: 1.68
-$global-link-color: #1565c0
-$global-padding: 12px
-$global-border-radius: 4px
+\:root
+    --nav-breakpoint: 900px
+    //--global-color: #333
+    //--global-bg-color: #fbfafa
+    //--global-font-size: 16px
+    //--global-shadow-color: rgba(0,0,0, 0.2)
+    //--global-shadow-color-hover: rgba(0,0,0,3)
+    --global-header-font: 'Orbitron', sans-serif
+    --global-body-font: 'Roboto', sans-serif
+    //--global-transition-speed: 0.25s
+    //--global-line-height: 1.68
+    //--global-link-color: #008080
+    //--global-padding: 12px
+    //--global-negative-padding: -12px
+    //--global-border-radius: 4px
 
-$screens: (xs: 300px, sm: 480px, md: 800px, lg: 1200px, xl: 1400px)
-
-.nav
     --nav-background: var(--dark-color)
-    --nav-text-color: var(--white-color)
-    --nav-height: 60px
+    --nav-text-color: var(--dark-color)
+    --nav-height: 50px
+    --nav-padding: 10px
     --speed: 100ms
     --nav-link-color: transparent
+    --nav-brand-font-size: 28px
     --nav-brand-text-color: var(--white-color)
-    --nav-link-bg-color: transparnt
-    --nav-link-text-color: white
-
+    --nav-button-height: 48px
+    --nav-link-gap: 10px
+    --nav-link-bg-color: transparent
+    --nav-link-text-color: var(--primary-color)
     --nav-link-bg-color-active: var(--primary-color)
-    --nav-link-text-color-active: #fff
+    --nav-link-text-color-active: var(--dark-color)
+    --nav-link-radius: 10px
+    //--nav-dropdown-arrow: ''
+
+    //--panel-bg-color: #fff
+    //--panel-text-color: #111
+    //--panel-border-color:  #dcdada
+    //--panel-radius: 20px
+    //--panel-footer-bg-color: #f8f8f8
+    //--panel-footer-text-color: #111
 
 
-// Panel colors
-$panel-background-color: var(--white-color)
-$panel-text-color: inharit
+.dark
+    --global-color: #ddd
+    --global-bg-color: #222
+    --global-font-size: 16px
+    --global-shadow-color: rgba(86,86,86,0.3)
+    --global-shadow-color-hover: rgba(86,86,86,0.4)
+    --default-color: #111
+
+    +set-colors((primary: green, black: #111, secondary: gold, default: #444))
+    --nav-background: var(--black-color)
+
+
+    --panel-bg-color: #111
+    --panel-text-color: #ddd
+    --panel-border-color:  #000
+    --panel-footer-bg-color: #000
+    --panel-footer-text-color: #ccc
+.primary
+    --panel-bg-color: var(--primary-color)
+    --panel-text-color: #ddd
+    --panel-border-color:  var(--primary-dark-color)
+    --panel-footer-bg-color: var(--primary-light-color)
+    --panel-footer-text-color: #ccc
+

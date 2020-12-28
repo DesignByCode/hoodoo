@@ -1,9 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const Row = ({children, direction, ...props}) => {
+const Row = ({className, children, direction, ...props}) => {
     return (
-        <div className={`row${direction && direction === 'reverse'? ' row--reverse' : ''}`} {...props}>
+        <div className={`row${direction && direction === 'reverse'? ' row--reverse' : '' } ${className}` } {...props}>
             {children}
         </div>
     )

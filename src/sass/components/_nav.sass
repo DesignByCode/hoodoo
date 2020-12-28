@@ -1,17 +1,20 @@
 .nav
-    position: fixed
+    position: relative
+    display: flex
     top: 0
     width: 100%
-    margin-bottom: 15px
-    color: var(--nav-text-color)
     background: var(--nav-background, transparent)
-    z-index: 100
+    color: var(--nav-text-color)
+    margin-bottom: 15px
     min-height: var(--nav-height, 50px)
-    display: flex
+    z-index: 100
+
+    &--fixed
+        position: fixed
 
     &__icon
         position: absolute
-        right: $global-padding
+        right: var(--global-padding, 15px)
         display: flex
         flex-direction: column
         justify-content: space-evenly
@@ -35,38 +38,68 @@
             justify-content: space-between
             align-items: center
 
-    &__links
-        display: none
-        padding: 0
-        margin: 0
-        list-style: none
-        +media-up($nav-breakpoint)
-            display: flex
-
-    &__item
-        a
+    &__link
+        &s
+            display: none
+            padding: 0
+            margin: 0
+            list-style: none
+            height: 0
+            transtion: all 2s ease
+            oveflow: hidden
+            +media-up($nav-breakpoint)
+                display: flex
+                height: auto
+        &
             background-color: var(--nav-link-bg-color)
-            +radius
-            display: inline-flex
-            padding: 10px 18px
-            justify-content: center
-            align-items: center
-            text-align: center
-            text-decoration: none
-            color: var(--nav-link-text-color)
+            +radius(var(--nav-link-radius, 0))
+            a
+                min-height: var(--nav-button-height, 50px)
+                display: inline-flex
+                padding: 0px 18px
+                justify-content: center
+                align-items: center
+                text-align: center
+                text-decoration: none
+                color: var(--nav-link-text-color)
 
             &:hover,
             &.active
                 background-color: var(--nav-link-bg-color-active)
-                color: var(--nav-link-text-color-active)
+                a
+                    color: var(--nav-link-text-color-active)
 
         &:not(:last-child)
-            margin-right: 10px
+            margin-right: var(--nav-link-gap, 0)
 
+        // Open navigation menu
+    &--open
+
+        .nav__links
+            +media-down($nav-breakpoint)
+                position: relative
+                top: var(--nav-height, 50)
+                left: 0
+                width: 100%
+                height: auto
+                display: flex
+                flex-direction: column
+                background-color: var(--nav-background)
+                box-shodow: rgba(#000, 1) 0 3px 20px
+                oveflow-y: visible
+
+
+        //Dropdown
+        &__dropdown
+            a:first-child
+                &::after
+                    font-size: 120%
+                    margin-left: 5px
+                    content: var(--nav-dropdown-arrow, '\21B4')
 
     &__brand
         font-size: var(--nav-brand-font-size, 20px)
-        font-family: $global-header-font
+        font-family: var(--global-header-font, 'Orbitron', sans-serif)
         a
             text-decoration: none
             color: var(--nav-brand-text-color, #fff)

@@ -11,6 +11,7 @@
             #{$pm_value}-top: $value
             #{$pm_value}-bottom: $value
 
+
         @each $p, $k in $gutter-position-map
             .#{$pm_key}#{$p}-#{$key}
                 #{$pm_value}-#{$k}: $value
@@ -24,7 +25,10 @@
                     #{$pm_value}-bottom: $value
 
 
-@each $b_key, $b_value in  $screens
+$screens_map: map-merge($screens, (nav: $nav-breakpoint))
+
+@each $b_key, $b_value in  $screens_map
+
     +media-up($b_key)
         @each $key, $value in $gutter-size-map
             @each $pm_key, $pm_value in $gutter-type-map

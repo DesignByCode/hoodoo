@@ -24,12 +24,12 @@ input[type="button"].btn
     vertical-align: middle
     transition: color, box-shadow 0.2s ease
     background: transparent
-    +radius
+    +radius(var(--btn-radius, 4px))
 
     /** Button Hover **/
     &:hover
         text-decoration: none
-        box-shadow: rgba(0,0,0,0.25) 0 4px 7px -3px
+        box-shadow: var(--global-shadow-color, rgba(0,0, 0,25)) 0 4px 7px -3px
 
     &:not(:first-child)
         margin-left: 10px
@@ -114,6 +114,6 @@ input[type="button"].btn
         +radius(0)
 
         &:first-child
-            +radius($global-border-radius 0 0 $global-border-radius)
+            +radius(var(--global-border-radius) 0 0 var(--global-border-radius))
         &:last-child
-            +radius(0 $global-border-radius $global-border-radius 0 )
+            +radius(0 var(--global-border-radius) var(--global-border-radius) 0 )

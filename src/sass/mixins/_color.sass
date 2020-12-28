@@ -2,3 +2,9 @@
 
 =alpha($property, $var, $opacity)
     #{$property}: $var
+
+=set-colors($colors, $strength: $color-shade-strength)
+    @each $key, $value in $colors
+        --#{$key}-light-color: #{lighten($value, $strength)}
+        --#{$key}-color: #{$value}
+        --#{$key}-dark-color: #{darken($value, $strength)}

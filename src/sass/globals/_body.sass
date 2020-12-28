@@ -1,8 +1,8 @@
 body
-    font-size: $global-font-size
+    font-size: var(--global-font-size, 16px)
     max-width: 100%
     overflow-x: hidden !important
-    line-height: $global-line-height
-    font-family: $global-body-font
-    color: $global-font-color
-    background: $global-background
+    line-height: var(--global-line-height, 1.68)
+    font-family: var(--global-body-font, sans-serif)
+    color: var(--global-color, #333)
+    background: var(--global-bg-color, #fbfafa)

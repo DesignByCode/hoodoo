@@ -1,12 +1,11 @@
+@import "../mixins/color"
 
-//$color-shade-strength: 10%
 
+//$colors: ()
 $default-colors: ('white': #fff, default: #f8f8f8, 'black': #111)
 
 $colors_set: map-merge($default-colors, $colors)
 
 \:root
-    @each $key, $value in $colors_set
-        --#{$key}-light-color: #{lighten($value, $color-shade-strength)}
-        --#{$key}-color: #{$value}
-        --#{$key}-dark-color: #{darken($value, $color-shade-strength)}
+    +set-colors($colors_set)
+

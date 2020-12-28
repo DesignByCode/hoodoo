@@ -2,7 +2,7 @@
     flex: 0 0 1
     width: 100%
     flex-direction: column
-    padding: $global-padding
+    padding: var(--global-padding, 15px)
 
 =columns($column-count: $columns, $breakpoint: $screens)
     @each $key, $value in $breakpoint

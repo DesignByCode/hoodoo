@@ -4,6 +4,7 @@ import ButtonsPage from './Pages/ButtonsPage'
 import LayoutPage from './Pages/LayoutPage'
 import TablesPage from './Pages/TablesPage'
 import HomePage from './Pages/HomePage'
+import PanelPage from './Pages/PanelPage'
 
 const RoutesLink = [
     {
@@ -34,7 +35,7 @@ const RoutesLink = [
         name: "Panel",
         path: "/panels",
         exact: true,
-        main: () => <h1>Panels</h1>
+        main: () => <PanelPage/>
     },
 ]
 

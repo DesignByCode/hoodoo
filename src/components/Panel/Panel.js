@@ -1,20 +1,22 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const Panel = ({children, shadow}) => {
+const Panel = ({children, shadow, mode}) => {
     return  (
-        <div className={`panel ${shadow ? 'shadow--1': ''}`}>
+        <div className={`panel ${mode} ${shadow ? 'shadow--4': ''}`}>
             {children}
         </div>
     )
 }
 
 Panel.propTypes = {
-    shadow: PropTypes.bool
+    shadow: PropTypes.bool,
+    mode: PropTypes.string
 }
 
 Panel.defaultProps = {
-    shadow: false
+    shadow: false,
+    mode: ''
 }
 
 export default Panel

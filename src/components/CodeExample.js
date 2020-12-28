@@ -2,12 +2,12 @@ import React, { useEffect, useRef } from 'react'
 import hljs from 'highlight.js/lib/core'
 import html from 'highlight.js/lib/languages/xml'
 import sass from 'highlight.js/lib/languages/scss'
-// import 'highlight.js/styles/night-owl.css'
-import 'highlight.js/styles/github.css'
+// import light from 'highlight.js/styles/github.css'
+import 'highlight.js/styles/ir-black.css'
 
 
 
-const CodeExample = ({ children, lang  }) => {
+const CodeExample = ({ children, lang, theme  }) => {
     const _code  = useRef()
 
     useEffect(() => {
@@ -28,7 +28,7 @@ const CodeExample = ({ children, lang  }) => {
 
     return (
         <div style={{position: 'relative'}}>
-            <div style={{position: 'absolute', zIndex: 2, right: '15px', top: '15px'}} className="btn btn--xs btn--primary-outline">COPY</div>
+            <div style={{position: 'absolute', zIndex: 2, right: '15px', top: '15px'}} className="btn btn--xs btn--white-outline">COPY</div>
             <pre className="shadow--1 r-4" ref={_code} style={{ padding: '30px 15px' }}>
                 <code>
                     { children }
