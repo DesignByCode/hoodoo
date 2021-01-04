@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/hoodoo/static/css/main.17531325.chunk.css",
-    "main.js": "/hoodoo/static/js/main.ec03d4a1.chunk.js",
-    "main.js.map": "/hoodoo/static/js/main.ec03d4a1.chunk.js.map",
+    "main.css": "/hoodoo/static/css/main.09b1cfea.chunk.css",
+    "main.js": "/hoodoo/static/js/main.14a5eda1.chunk.js",
+    "main.js.map": "/hoodoo/static/js/main.14a5eda1.chunk.js.map",
     "runtime-main.js": "/hoodoo/static/js/runtime-main.cf315e58.js",
     "runtime-main.js.map": "/hoodoo/static/js/runtime-main.cf315e58.js.map",
     "static/css/2.1d6af1d1.chunk.css": "/hoodoo/static/css/2.1d6af1d1.chunk.css",
-    "static/js/2.220e2992.chunk.js": "/hoodoo/static/js/2.220e2992.chunk.js",
-    "static/js/2.220e2992.chunk.js.map": "/hoodoo/static/js/2.220e2992.chunk.js.map",
+    "static/js/2.96396ddd.chunk.js": "/hoodoo/static/js/2.96396ddd.chunk.js",
+    "static/js/2.96396ddd.chunk.js.map": "/hoodoo/static/js/2.96396ddd.chunk.js.map",
     "index.html": "/hoodoo/index.html",
     "static/css/2.1d6af1d1.chunk.css.map": "/hoodoo/static/css/2.1d6af1d1.chunk.css.map",
-    "static/css/main.17531325.chunk.css.map": "/hoodoo/static/css/main.17531325.chunk.css.map",
-    "static/js/2.220e2992.chunk.js.LICENSE.txt": "/hoodoo/static/js/2.220e2992.chunk.js.LICENSE.txt"
+    "static/css/main.09b1cfea.chunk.css.map": "/hoodoo/static/css/main.09b1cfea.chunk.css.map",
+    "static/js/2.96396ddd.chunk.js.LICENSE.txt": "/hoodoo/static/js/2.96396ddd.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.cf315e58.js",
     "static/css/2.1d6af1d1.chunk.css",
-    "static/js/2.220e2992.chunk.js",
-    "static/css/main.17531325.chunk.css",
-    "static/js/main.ec03d4a1.chunk.js"
+    "static/js/2.96396ddd.chunk.js",
+    "static/css/main.09b1cfea.chunk.css",
+    "static/js/main.14a5eda1.chunk.js"
   ]
 }
