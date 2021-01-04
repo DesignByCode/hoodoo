@@ -1,107 +1,102 @@
+
 .nav
-    position: relative
+    background-color: var(--nav-background-color, nav(background))
+    min-height: var(--nav-height, nav(height))
     display: flex
-    top: 0
-    width: 100%
-    background: var(--nav-background, transparent)
-    color: var(--nav-text-color)
-    margin-bottom: 15px
-    min-height: var(--nav-height, 50px)
-    z-index: 100
+    justify-content: center
+    flex-direction: column
+    align-items: center
+    padding: var(--nav-padding, nav(padding)) 0
+    user-select: none
 
     &--fixed
         position: fixed
-
-    &__icon
-        position: absolute
-        right: var(--global-padding, 15px)
-        display: flex
-        flex-direction: column
-        justify-content: space-evenly
-        align-items: center
-        height: 40px
-        width: 40px
-        padding: 6px
-        border: solid 2px white
-        +radius(3px)
-        cursor: pointer
-        +media-up($nav-breakpoint)
-            display: none
+        top: 0
+        left: 0
+        width: 100%
+        z-index: 100
 
     &__wrapper
-        @extend .wrapper
+        position: relative
+        width: 100%
+        max-width: $max-screen-width
+        padding: 0 var(--global-padding, 15px)
+        +media-nav
+            align-items: center
+            display: flex
+
+    &--fluid
+        & .nav__wrapper
+            max-width: 100%
+
+    &__trigger
+        display: flex
+        justify-content: center
+        align-items: center
+        height: var(--nav-trigger-size, nav(trigger, size))
+        width: var(--nav-trigger-size, nav(trigger, size))
+        color: var(--nav-trigger-color, nav(trigger, color))
+        background: var(--nav-trigger-background, nav(trigger, background))
+        border-width: var(--nav-trigger-width, nav(trigger, border-width))
+        border-color: var(--nav-trigger-border-color, nav(trigger, border-color))
+        border-radius: var(--nav-trigger-border-radius, nav(trigger, border-radius))
+        border-style: solid
+        cursor: pointer
+
+        +media-nav
+            display: none
+
+    &__container
+        display: flex
+        flex-direction: row
         justify-content: space-between
         align-items: center
 
-        &--fluid
-            @extend .wrapper--fluid
-            justify-content: space-between
-            align-items: center
+    &__brand
+        display: flex
+        align-items: center
+        font-size: var(--nav-brand-font-size, nav(brand, font-size))
+        line-height: var(--nav-height, nav(height))
+        font-family: var(--nav-brand-font-family, nav(brand, font-family))
+        color: var(--nav-brand-color, nav(brand, color))
+        a
+            text-decoration: none
+            color: var(--nav-brand-color, nav(brand, color))
+
+    & .gap
+        gap: var(--nav-links-gap, nav(links, gap))
+
+    &__responsive
+        display: none
+        padding-bottom: var(--global-padding, 15px)
+        +media-nav
+            display: flex
+            padding-bottom: 0
+
+    &--open
+        display: block
 
     &__link
         &s
-            display: none
             padding: 0
             margin: 0
             list-style: none
-            height: 0
-            transtion: all 2s ease
-            oveflow: hidden
-            +media-up($nav-breakpoint)
+            +media-nav
                 display: flex
-                height: auto
-        &
-            background-color: var(--nav-link-bg-color)
-            +radius(var(--nav-link-radius, 0))
-            a
-                min-height: var(--nav-button-height, 50px)
-                display: inline-flex
-                padding: 0px 18px
-                justify-content: center
-                align-items: center
-                text-align: center
-                text-decoration: none
-                color: var(--nav-link-text-color)
 
-            &:hover,
-            &.active
-                background-color: var(--nav-link-bg-color-active)
-                a
-                    color: var(--nav-link-text-color-active)
-
-        &:not(:last-child)
-            margin-right: var(--nav-link-gap, 0)
-
-        // Open navigation menu
-    &--open
-
-        .nav__links
-            +media-down($nav-breakpoint)
-                position: relative
-                top: var(--nav-height, 50)
-                left: 0
-                width: 100%
-                height: auto
-                display: flex
-                flex-direction: column
-                background-color: var(--nav-background)
-                box-shodow: rgba(#000, 1) 0 3px 20px
-                oveflow-y: visible
-
-
-        //Dropdown
-        &__dropdown
-            a:first-child
-                &::after
-                    font-size: 120%
-                    margin-left: 5px
-                    content: var(--nav-dropdown-arrow, '\21B4')
-
-    &__brand
-        font-size: var(--nav-brand-font-size, 20px)
-        font-family: var(--global-header-font, 'Orbitron', sans-serif)
         a
+            height: var(--nav-button-height, nav(button, height))
+            line-height: var(--nav-button-height, nav(button, height))
+            font-family: var(--nav-brand-font-family, nav(brand, font-family))
+            background-color: var(--nav-links-background, nav(links, background))
+            color: var(--nav-links-color, nav(links, color))
             text-decoration: none
-            color: var(--nav-brand-text-color, #fff)
+            display: block
+            padding: 0 var(--nav-button-height, nav(button, padding))
 
+        &:hover,
+        &--active
+            a
+                background-color: var(--nav-links-background-hover, nav(links, background-hover))
+                color: var(--nav-links-color-hover, nav(links, color-hover))
 

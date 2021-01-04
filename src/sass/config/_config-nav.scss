@@ -1,0 +1,34 @@
+
+$nav-map: (
+    "breakpoint": 900px,
+    "height": 62px,
+    "padding": 0px,
+    "background": #111,
+    "links": (
+        "gap": 15px,
+        "background": transparent,
+        "background-hover": #fff,
+        "color": white,
+        "color-hover": #111,
+        "font-family": sans-serif,
+    ),
+    "button": (
+        "height": 60px,
+        "padding": 15px,
+        "background": #eee
+    ),
+    "brand": (
+        "font-size": 22px,
+        "font-family": sans-serif,
+        "color": #fff
+    ),
+    "trigger": (
+        "size" : 40px,
+        "background": transparent,
+        "color": white,
+        "border-color": white,
+        "border-width": 1px,
+        "border-radius": 3px
+    )
+
+)

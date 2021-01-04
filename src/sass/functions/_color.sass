@@ -1,2 +1,6 @@
-@function color($key)
-    @return map-get($colors_set, $key)
+@function color($key, $colors-theme: null)
+    @if ($colors-theme == 'theme')
+        @return map-get($theme-colors, $key)
+    @else
+        @return map-get($colors_set, "#{$key}")
+

@@ -1,6 +1,7 @@
-import React , { useState, useRef, useEffect } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import React , { useState } from 'react'
+import { Link, NavLink, useLocation } from 'react-router-dom'
 import useDimensions from '../hooks/useDimensions'
+import {GiHamburgerMenu} from 'react-icons/all'
 
 const LINKS = [
     {
@@ -35,55 +36,52 @@ const Menu = () => {
 
     const location = useLocation();
 
-    const _ref = useRef()
 
     const {width} = useDimensions()
 
     const [open, setOpen] = useState(false)
 
-    useEffect(() => {
-        // navResize()
-    })
 
 
-    const toggleMenu = _ => {
-        return open ? 'nav--open' : ''
+    const toggleMenu = () => {
+        setOpen(!open)
+        console.log(open)
+    }
+
+    const openClass = () => {
+        return open && 'nav--open'
     }
 
     const isActive = path => {
-        return location.pathname === path ? 'active' : ''
+        return location.pathname === path ? 'nav__link--active' : ''
     }
 
-    const navResize = () => {
-        if (width >= 900 ) {
-            _ref.current.classList.remove('nav--open')
-        }
-    }
 
     return  (
-        <nav className='nav nav--fixed'>
-            <div className='nav__wrapper--fluid'>
-                <div className='nav__brand'>
-                    <Link to="/">HOODOO</Link>
-                    <div className='nav__toggle' onClick={_ => {
-                        setOpen(!open)
-                    }}/>
-                </div>
-                <div ref={_ref} className={`nav__responsive justify--between ${toggleMenu()}`}>
-                    <div className='nav__search nav-mr-5'>
-                        <input type='text' placeholder="Search"/>
+        <nav className='nav nav--fluid nav--fixed shadow--1'>
+            <div className='nav__wrapper gap justify--between'>
+                <div className='nav__container'>
+                    <div className='nav__brand'>
+                        <Link to={`/`}>HOODOO</Link>
                     </div>
-                    <ul className={`nav__links`}>
-                        {
-                            LINKS.map(link => (
-                                <li key={link.name} className={`nav__item ${isActive(link.path)}`}>
-                                    <Link to={link.path}>{link.name}</Link>
-                                </li>
-                            ))
-                        }
-                    </ul>
+                    <div onClick={toggleMenu} className='nav__trigger'>
+                        <GiHamburgerMenu  size={24}/>
+                    </div>
                 </div>
 
+                <div className={`nav__responsive ${open && ' nav--open'}`}>
+                    <ul className='nav__links'>
+                        <li className={`nav__link ${isActive('/')}`}>
+                            <NavLink to="/" exact>Home</NavLink>
+                        </li>
+                        <li className={`nav__link ${isActive('/buttons')}`}>
+                            <NavLink to="/buttons" exact>Buttons</NavLink>
+                        </li>
+                        <li className={`nav__link ${isActive('/panels')}`}>
+                            <NavLink to="/panels" exact>Panels</NavLink>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
     )

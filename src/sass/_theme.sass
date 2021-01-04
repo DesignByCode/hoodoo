@@ -1,21 +1,21 @@
-@import "mixins/color"
 
 $color-shade-strength: 7% !default
-$colors: (primary: #e63946, secondary: #457b9d,  dark: #1d3557, default: #f1faee)
+$colors: ()
+$colors: (primary: #e63946, secondary: #457b9d, dark: #1d3557, default: #f1faee)
 $screens: (xs: 300px, sm: 480px, md: 800px, lg: 1200px, xl: 1400px)
 $max-screen-width: 1000px
 $columns: 12
 $nav-breakpoint: 900px
 
 \:root
-    --nav-breakpoint: 900px
+    --global-header-font: 'Orbitron', sans-serif
+    --global-body-font: 'Roboto', sans-serif
+
     //--global-color: #333
     //--global-bg-color: #fbfafa
     //--global-font-size: 16px
     //--global-shadow-color: rgba(0,0,0, 0.2)
     //--global-shadow-color-hover: rgba(0,0,0,3)
-    --global-header-font: 'Orbitron', sans-serif
-    --global-body-font: 'Roboto', sans-serif
     //--global-transition-speed: 0.25s
     //--global-line-height: 1.68
     //--global-link-color: #008080
@@ -23,21 +23,31 @@ $nav-breakpoint: 900px
     //--global-negative-padding: -12px
     //--global-border-radius: 4px
 
-    --nav-background: var(--dark-color)
-    --nav-text-color: var(--dark-color)
-    --nav-height: 50px
-    --nav-padding: 10px
-    --speed: 100ms
-    --nav-link-color: transparent
-    --nav-brand-font-size: 28px
-    --nav-brand-text-color: var(--white-color)
-    --nav-button-height: 48px
-    --nav-link-gap: 10px
-    --nav-link-bg-color: transparent
-    --nav-link-text-color: var(--primary-color)
-    --nav-link-bg-color-active: var(--primary-color)
-    --nav-link-text-color-active: var(--dark-color)
-    --nav-link-radius: 10px
+    //--nav-background-color: var(--dark-color)
+    //--nav-height: 80px
+    //--nav-padding: 10px
+    //--nav-breakpoint: 900px
+    //--nav-links-gap: 10px
+
+    //--nav-brand-font-size: 22px
+    //--nav-brand-color: var(--white-color)
+    --nav-brand-font-family: 'Orbitron', sans-serif
+
+    //--nav-trigger-color: blue
+    //--nav-trigger-background: #eee
+    //--nav-trigger-border-color: red
+    //--nav-trigger-width: 3px
+    //--nav-trigger-size: 30px
+
+    //--nav-links-background: transparent
+    //--nav-links-background-hover: #fff
+    //--nav--links-color: #fff
+    //--nav-links-color-hover: #111
+
+    //--nav-button-height: 48px
+    //--nav-link-text-color: var(--primary-color)
+    //--nav-link-text-color-active: var(--dark-color)
+    //--nav-link-radius: 10px
     //--nav-dropdown-arrow: ''
 
     //--panel-bg-color: #fff
@@ -47,28 +57,4 @@ $nav-breakpoint: 900px
     //--panel-footer-bg-color: #f8f8f8
     //--panel-footer-text-color: #111
 
-
-.dark
-    --global-color: #ddd
-    --global-bg-color: #222
-    --global-font-size: 16px
-    --global-shadow-color: rgba(86,86,86,0.3)
-    --global-shadow-color-hover: rgba(86,86,86,0.4)
-    --default-color: #111
-
-    +set-colors((primary: green, black: #111, secondary: gold, default: #444))
-    --nav-background: var(--black-color)
-
-
-    --panel-bg-color: #111
-    --panel-text-color: #ddd
-    --panel-border-color:  #000
-    --panel-footer-bg-color: #000
-    --panel-footer-text-color: #ccc
-.primary
-    --panel-bg-color: var(--primary-color)
-    --panel-text-color: #ddd
-    --panel-border-color:  var(--primary-dark-color)
-    --panel-footer-bg-color: var(--primary-light-color)
-    --panel-footer-text-color: #ccc
 

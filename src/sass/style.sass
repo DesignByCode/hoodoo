@@ -22,3 +22,29 @@ body
 .sidebar
     +media-up(md)
         min-height: 100vh
+
+
+.dark
+    --global-color: #ddd
+    --global-bg-color: #222
+    --global-font-size: 16px
+    --global-shadow-color: rgba(86,86,86,0.3)
+    --global-shadow-color-hover: rgba(86,86,86,0.4)
+    --default-color: #111
+
+    +set-colors((primary: green, black: #111, secondary: gold, default: #444))
+    --nav-background: var(--black-color)
+
+
+    --panel-bg-color: #111
+    --panel-text-color: #ddd
+    --panel-border-color:  #000
+    --panel-footer-bg-color: #000
+    --panel-footer-text-color: #ccc
+.primary
+    --panel-bg-color: var(--primary-color)
+    --panel-text-color: #ddd
+    --panel-border-color:  var(--primary-dark-color)
+    --panel-footer-bg-color: var(--primary-light-color)
+    --panel-footer-text-color: #ccc
+
