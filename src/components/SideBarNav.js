@@ -6,9 +6,16 @@ import ToggleTheme from './ToggleTheme'
 const SideBarNav = ({toggleTheme, theme}) => {
     return  (
         <div className="sticky-sidebar" >
+            <ToggleTheme/>
             <ul>
                 <li>
                     <NavLink to="/">Home</NavLink>
+                </li>
+                <li>
+                    <NavLink to="/layout">Layout</NavLink>
+                </li>
+                <li>
+                    <NavLink to="/navigation">Navigation</NavLink>
                 </li>
                 <li>
                     <NavLink to="/buttons">Buttons</NavLink>
@@ -20,7 +27,6 @@ const SideBarNav = ({toggleTheme, theme}) => {
                     <NavLink to="/tables">Tables</NavLink>
                 </li>
             </ul>
-            <ToggleTheme theme={theme} onChange={toggleTheme}/>
 
         </div>
     )

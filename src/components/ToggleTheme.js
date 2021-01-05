@@ -1,12 +1,12 @@
-import React from 'react'
+import { useTheme, useThemeUpdate } from '../context/ThemeContextProvider'
 
-const ToggleTheme = ({onChange, theme}) => {
+const ToggleTheme = () => {
+    const darkTheme = useTheme()
+    const toggleTheme = useThemeUpdate()
     return  (
         <div>
-            <label>
-                {theme.toUpperCase()} &nbsp;
-                <input type='checkbox'  onChange={onChange} />
-            </label>
+            <button onClick={toggleTheme} className='btn btn--primary btn--block'>TOGGLE THEME</button>
+            {darkTheme}
         </div>
     )
 }

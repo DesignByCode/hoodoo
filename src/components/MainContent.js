@@ -5,6 +5,7 @@ import LayoutPage from './Pages/LayoutPage'
 import TablesPage from './Pages/TablesPage'
 import HomePage from './Pages/HomePage'
 import PanelPage from './Pages/PanelPage'
+import NavPage from './Pages/NavPage'
 
 const RoutesLink = [
     {
@@ -14,10 +15,16 @@ const RoutesLink = [
         main: () => <HomePage/>
     },
     {
-        name: "Layout",
-        path: "/layouts",
+        name: "Layout (The Grid)",
+        path: "/layout",
         exact: true,
         main: () => <LayoutPage/>
+    },
+    {
+        name: "Navigation",
+        path: "/navigation",
+        exact: true,
+        main: () => <NavPage/>
     },
     {
         name: "Buttons",

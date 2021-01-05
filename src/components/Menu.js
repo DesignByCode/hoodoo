@@ -1,61 +1,48 @@
 import React , { useState } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
-import useDimensions from '../hooks/useDimensions'
 import {GiHamburgerMenu} from 'react-icons/all'
 
-const LINKS = [
-    {
-        name: 'HOME',
-        path: '/',
-        children: []
-    },
-    {
-        name: 'LAYOUT',
-        path: '/layouts',
-        children: []
-    },
-    {
-        name: 'BUTTONS',
-        path: '/buttons',
-        children: []
-    },
-    {
-        name: 'PANELS',
-        path: '/panels',
-        children: []
-    },
-    {
-        name: 'DROPDOWN',
-        path: '/dropdown',
-        children: []
-    },
-]
+// const LINKS = [
+//     {
+//         name: 'HOME',
+//         path: '/',
+//         children: []
+//     },
+//     {
+//         name: 'LAYOUT',
+//         path: '/layouts',
+//         children: []
+//     },
+//     {
+//         name: 'BUTTONS',
+//         path: '/buttons',
+//         children: []
+//     },
+//     {
+//         name: 'PANELS',
+//         path: '/panels',
+//         children: []
+//     },
+//     {
+//         name: 'DROPDOWN',
+//         path: '/dropdown',
+//         children: []
+//     },
+// ]
 
 
 const Menu = () => {
 
     const location = useLocation();
-
-
-    const {width} = useDimensions()
-
     const [open, setOpen] = useState(false)
-
-
 
     const toggleMenu = () => {
         setOpen(!open)
-        console.log(open)
-    }
-
-    const openClass = () => {
-        return open && 'nav--open'
     }
 
     const isActive = path => {
         return location.pathname === path ? 'nav__link--active' : ''
     }
-
 
     return  (
         <nav className='nav nav--fluid nav--fixed shadow--1'>

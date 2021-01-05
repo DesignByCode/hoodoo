@@ -31,7 +31,6 @@ const LayoutPage = () => {
                            Array(6).fill().map(e => (
                                <div key={uniqueId()} className="sm-col-6 md-col-2">
                                    <div className='border--default  bg--default border--black-light text--white r-5 py-4  flex justify--center flex--align-center py-2'>
-
                                    </div>
                                </div>
                            ))
@@ -42,7 +41,6 @@ const LayoutPage = () => {
                            Array(4).fill().map(e => (
                                <div key={uniqueId()} className="sm-col-6 md-col-3">
                                    <div className='border--default  bg--default border--black-light text--white r-5 py-4  flex justify--center flex--align-center py-2'>
-
                                    </div>
                                </div>
                            ))
@@ -53,7 +51,6 @@ const LayoutPage = () => {
                            Array(3).fill().map(e => (
                                <div key={uniqueId()} className="sm-col-6 md-col-4">
                                    <div className='border--default  bg--default border--black-light text--white r-5 py-4  flex justify--center flex--align-center py-2'>
-
                                    </div>
                                </div>
                            ))
@@ -64,7 +61,6 @@ const LayoutPage = () => {
                            Array(2).fill().map(e => (
                                <div key={uniqueId()} className="sm-col-6 md-col-6">
                                    <div className='border--default  bg--default border--black-light text--white r-5 py-4  flex justify--center flex--align-center py-2'>
-
                                    </div>
                                </div>
                            ))
@@ -74,7 +70,6 @@ const LayoutPage = () => {
                    <div className='row'>
                         <div className='sm-col-6 md-col-12'>
                             <div className='border--default  bg--default border--black-light text--white r-5 py-4  flex justify--center flex--align-center py-2'>
-
                             </div>
                         </div>
                    </div>

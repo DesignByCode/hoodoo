@@ -24,13 +24,13 @@ const App = () => {
                     <Menu/>
                     <Wrapper fluid className="mt-7">
                         <Row>
-                            <Column className="md-col-2 sidebar bg--default">
+                            <Column className="md-col-3 lg-col-2 sidebar bg--default">
                                 <SideBarNav theme={theme} toggleTheme={toggleTheme}/>
                             </Column>
-                            <Column className="md-col-8">
+                            <Column className="md-col-6 lg-col-8">
                                 <MainContent/>
                             </Column>
-                            <Column className="md-col-2 sidebar bg--default">
+                            <Column className="md-col-3 lg-col-2 sidebar bg--default">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, nobis.
                             </Column>
                         </Row>
