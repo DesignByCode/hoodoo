@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/hoodoo/static/css/main.6f80d499.chunk.css",
+    "main.css": "/hoodoo/static/css/main.66db5a4e.chunk.css",
     "main.js": "/hoodoo/static/js/main.a64c64fb.chunk.js",
     "main.js.map": "/hoodoo/static/js/main.a64c64fb.chunk.js.map",
     "runtime-main.js": "/hoodoo/static/js/runtime-main.cf315e58.js",
@@ -10,14 +10,14 @@
     "static/js/2.96396ddd.chunk.js.map": "/hoodoo/static/js/2.96396ddd.chunk.js.map",
     "index.html": "/hoodoo/index.html",
     "static/css/2.1d6af1d1.chunk.css.map": "/hoodoo/static/css/2.1d6af1d1.chunk.css.map",
-    "static/css/main.6f80d499.chunk.css.map": "/hoodoo/static/css/main.6f80d499.chunk.css.map",
+    "static/css/main.66db5a4e.chunk.css.map": "/hoodoo/static/css/main.66db5a4e.chunk.css.map",
     "static/js/2.96396ddd.chunk.js.LICENSE.txt": "/hoodoo/static/js/2.96396ddd.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.cf315e58.js",
     "static/css/2.1d6af1d1.chunk.css",
     "static/js/2.96396ddd.chunk.js",
-    "static/css/main.6f80d499.chunk.css",
+    "static/css/main.66db5a4e.chunk.css",
     "static/js/main.a64c64fb.chunk.js"
   ]
 }
