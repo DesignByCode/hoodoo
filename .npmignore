@@ -2,6 +2,8 @@ build
 node_modules
 public
 src/components
+src/context
+src/hooks
 src/data
 src/App.js
 src/index.js
@@ -23,3 +25,6 @@ src/index.js
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+
+sass/style.sass

@@ -11,7 +11,7 @@
         "mobile-first",
         "web"
     ],
-    "homepage": "https://designbycode.github.io/hoodoo",
+    "homepage": "https://designbycode.github.io/hoodoo/",
     "version": "0.1.4",
     "private": false,
     "dependencies": {
