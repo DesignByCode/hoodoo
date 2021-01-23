@@ -18,6 +18,9 @@ const SideBarNav = ({toggleTheme, theme}) => {
                     <NavLink to="/navigation">Navigation</NavLink>
                 </li>
                 <li>
+                    <NavLink to="/form">Form</NavLink>
+                </li>
+                <li>
                     <NavLink to="/buttons">Buttons</NavLink>
                 </li>
                 <li>

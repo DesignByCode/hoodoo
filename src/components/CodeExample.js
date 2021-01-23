@@ -28,7 +28,7 @@ const CodeExample = ({ children, lang, theme  }) => {
 
     return (
         <div style={{position: 'relative'}}>
-            <div style={{position: 'absolute', zIndex: 2, right: '15px', top: '15px'}} className="btn btn--xs btn--white-outline">COPY</div>
+            {/*<div style={{position: 'absolute', zIndex: 2, right: '15px', top: '15px'}} className="btn btn--xs btn--white-outline">COPY</div>*/}
             <pre className="shadow--1 r-4" ref={_code} style={{ padding: '30px 15px' }}>
                 <code>
                     { children }

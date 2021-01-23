@@ -1,0 +1,33 @@
+
+
+.form
+    &__group
+        margin-bottom: var(--global-padding, 15px)
+
+    &__label
+        font-weight: 700
+        margin-bottom: 5px
+
+    &__wrap
+        display: flex
+        border: solid 2px var(--default-color)
+        border-radius: var(--global-radius, 3px)
+        background: #fff
+        padding: 3px
+        width: 100%
+        align-items: center
+        //height: 40px
+        & > .btn
+            height: 100%
+
+        &:focus-within
+            box-shadow: var(--default-dark-color) 0 0 10px
+
+
+
+    &__item
+        flex: 1
+        padding: 10px
+        border: none
+        outline: none
+

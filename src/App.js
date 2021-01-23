@@ -8,6 +8,7 @@ import SideBarNav from './components/SideBarNav'
 import MainContent from './components/MainContent'
 import Menu from './components/Menu'
 import useTheme from './hooks/useTheme'
+import SideBarRight from './components/SideBarRight'
 
 const App = () => {
 
@@ -31,7 +32,7 @@ const App = () => {
                                 <MainContent/>
                             </Column>
                             <Column className="md-col-3 lg-col-2 sidebar bg--default">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, nobis.
+                                <SideBarRight/>
                             </Column>
                         </Row>
                     </Wrapper>

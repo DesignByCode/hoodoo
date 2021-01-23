@@ -6,6 +6,10 @@ import TablesPage from './Pages/TablesPage'
 import HomePage from './Pages/HomePage'
 import PanelPage from './Pages/PanelPage'
 import NavPage from './Pages/NavPage'
+import { Component } from 'react'
+import FormPage from './Pages/FormPage'
+
+
 
 const RoutesLink = [
     {
@@ -43,6 +47,12 @@ const RoutesLink = [
         path: "/panels",
         exact: true,
         main: () => <PanelPage/>
+    },
+    {
+        name: "Form",
+        path: "/form",
+        exact: true,
+        main: () => <FormPage/>
     },
 ]
 

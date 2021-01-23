@@ -87,7 +87,7 @@ const LayoutPage = () => {
                </div>
            </Column>
 
-            <Column className={`md-col-12`}>
+            <Column className={`md-col-12 px-6`}>
                 <div className={`row`}>
                     {
                         Array(6).fill().map(e => (

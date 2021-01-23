@@ -10,8 +10,35 @@ const NavPage = () => {
         <div>
             <Row>
                 <Column className="md-col-12">
+
                     <h1>Navigation</h1>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias asperiores aspernatur, commodi cum delectus distinctio doloribus dolorum ea eum laudantium, maiores modi molestias mollitia natus nisi
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias asperiores aspernatur, commodi cum delectus
+                        distinctio doloribus dolorum ea eum laudantium, maiores modi molestias mollitia natus nisi</p>
+                    <nav className="nav second-nav">
+                        <div className="nav__wrapper">
+                            <div className="nav__container">
+                                <div className="nav__brand mr-6">
+                                    <a href="#@">Hoodoo</a>
+                                </div>
+                                <div className="nav__trigger">
+                                    \\
+                                </div>
+                            </div>
+                            <div className="nav__responsive">
+                                <ul className="nav__links">
+                                    <li className="nav__link">
+                                        <a href="#@">Home</a>
+                                    </li>
+                                    <li className="nav__link">
+                                        <a href="#@">About</a>
+                                    </li>
+                                    <li className="nav__link">
+                                        <a href="#@">Contact Us</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
                    <CodeExample>
                        &lt;nav class=&quot;nav&quot;&gt; <br/>
                        &nbsp; &lt;div class=&quot;nav__wrapper&quot;&gt; <br/>

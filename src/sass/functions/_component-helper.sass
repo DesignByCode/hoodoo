@@ -5,3 +5,9 @@
     @each $key in $keys
         $map:  map-get($map, $key)
     @return $map
+
+@function global($keys...)
+    $map: $global-map
+    @each $key in $keys
+        $map:  map-get($map, $key)
+    @return $map

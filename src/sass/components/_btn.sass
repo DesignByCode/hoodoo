@@ -2,6 +2,9 @@
 
 /** Default Button style **/
 
+.btn
+    background-color: green
+
 .btn,
 a.btn,
 button.btn,
@@ -42,7 +45,8 @@ input[type="button"].btn
     /** Button Colors **/
     @each $key, $value in $colors_set
         /** Solid Buttons **/
-        &--#{$key}
+        &--#{$key},
+        &--#{$key}\:hover:hover
             background-color: var(--#{$key}-color)
             @if $key == 'default'
                 border: solid 1px var(--#{$key}-dark-color)
@@ -65,7 +69,8 @@ input[type="button"].btn
                     filter: brightness(0.2)
 
         /** Outline Button **/
-        &--#{$key}-outline
+        &--#{$key}-outline,
+        &--#{$key}-outline\:hover
             background-color: transparent
             border: solid 2px var(--#{$key}-color)
             color: var(--#{$key}-color)
@@ -76,7 +81,8 @@ input[type="button"].btn
                     border: solid 2px var(--#{$key}-dark-color)
 
         /** Gradient Button **/
-        &--#{$key}-gradient
+        &--#{$key}-gradient,
+        &--#{$key}-gradient\:hover
             transition: all 0.25s ease
             background: linear-gradient(to top, var(--#{$key}-light-color) 0% 0%, var(--#{$key}-dark-color))
             @if lightness($value) < 60%
@@ -91,7 +97,9 @@ input[type="button"].btn
     &--block
         width: 100%
 
-    &--glass
+    &--glass,
+    &--glass\:hover
+
         backdrop-filter: blur(2px)
         background-clip: padding-box
         border: solid 2px transparent
