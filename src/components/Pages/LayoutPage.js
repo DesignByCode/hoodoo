@@ -75,12 +75,12 @@ const LayoutPage = () => {
                    </div>
 
                    <CodeExample>
-                       &lt;div className='wrapper'&gt; <br/>
-                       &nbsp; &lt;div className='row'&gt; <br/>
-                       &nbsp; &nbsp; &lt;div className='sm-col-6 md-col-3'&gt;&lt;/div&gt; <br/>
-                       &nbsp; &nbsp; &lt;div className='sm-col-6 md-col-3'&gt;&lt;/div&gt; <br/>
-                       &nbsp; &nbsp; &lt;div className='sm-col-6 md-col-3'&gt;&lt;/div&gt; <br/>
-                       &nbsp; &nbsp; &lt;div className='sm-col-6 md-col-3'&gt;&lt;/div&gt; <br/>
+                       &lt;div class='wrapper'&gt; <br/>
+                       &nbsp; &lt;div class='row'&gt; <br/>
+                       &nbsp; &nbsp; &lt;div class='sm-col-6 md-col-3'&gt;&lt;/div&gt; <br/>
+                       &nbsp; &nbsp; &lt;div class='sm-col-6 md-col-3'&gt;&lt;/div&gt; <br/>
+                       &nbsp; &nbsp; &lt;div class='sm-col-6 md-col-3'&gt;&lt;/div&gt; <br/>
+                       &nbsp; &nbsp; &lt;div class='sm-col-6 md-col-3'&gt;&lt;/div&gt; <br/>
                        &nbsp; &lt;/div&gt; <br/>
                        &lt;/div&gt;
                    </CodeExample>

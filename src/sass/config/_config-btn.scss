@@ -1,0 +1,22 @@
+$btn-sizes-map: (
+	xs: (
+			padding: 2px 5px, 
+			font-size: 80%
+		), 
+	sm: (
+			padding: 4px 8px, 
+			font-size: 90%
+		),  
+	md: (
+			padding: 12px 20px, 
+			font-size: 100%
+		), 
+	lg: (
+			padding: 15px 25px, 
+			font-size: 100%
+		), 
+	xl: (
+			padding: 20px 30px, 
+			font-size: 100%
+		)
+	)

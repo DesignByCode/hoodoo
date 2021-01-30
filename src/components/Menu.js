@@ -52,7 +52,7 @@ const Menu = () => {
                         <Link to={`/`}>HOODOO</Link>
                     </div>
                     <div onClick={toggleMenu} className='nav__trigger'>
-                        <GiHamburgerMenu  size={24}/>
+                        <GiHamburgerMenu  size={20}/>
                     </div>
                 </div>
 

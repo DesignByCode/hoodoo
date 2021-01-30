@@ -1,9 +1,11 @@
 @import "../mixins/color"
 
 
-$default-colors: ('white': #fff, default: #f8f8f8, 'black': #111)
+$default-colors: map-merge($theme-colors, $alert-colors)
 
-$colors_set: map-merge($default-colors, $colors)
+$theme-colors-set: map-merge($colors, $alert-colors)
+
+$colors_set: map-merge($default-colors, $theme-colors-set)
 
 \:root
     +set-colors($colors_set)

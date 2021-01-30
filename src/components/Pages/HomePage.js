@@ -9,8 +9,9 @@ const HomePage = () => {
         <div>
             <Row>
                 <Column className="md-col-12">
-                    <h1>Home</h1>
-                    <a href='#home'>HOME PAGE LINK</a>
+                    <div className="panel panel__body bg--black-light text--white">
+                        Hello world
+                    </div>
                 </Column>
             </Row>
         </div>
