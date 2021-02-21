@@ -28,12 +28,12 @@ const App = () => {
                             <Column className="md-col-3 lg-col-2 sidebar bg--default">
                                 <SideBarNav theme={theme} toggleTheme={toggleTheme}/>
                             </Column>
-                            <Column className="md-col-6 lg-col-8">
+                            <Column className="md-col-6 lg-col-10">
                                 <MainContent/>
                             </Column>
-                            <Column className="md-col-3 lg-col-2 sidebar bg--default">
-                                <SideBarRight/>
-                            </Column>
+                            {/*<Column className="md-col-3 lg-col-2 sidebar bg--default">*/}
+                            {/*    <SideBarRight/>*/}
+                            {/*</Column>*/}
                         </Row>
                     </Wrapper>
                 </div>
